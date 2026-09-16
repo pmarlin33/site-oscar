@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — VNH Luxury</title>
+  <meta name="description" content="Soumettez votre demande privée à VNH Luxury. Réponse garantie sous 24 heures par votre interlocuteur dédié." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Navigation principale">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">VNH <span>Luxury</span></a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="residences.html">Résidences</a></li>
+        <li><a href="evenements.html">Événements</a></li>
+        <li><a href="gastronomie.html">Gastronomie</a></li>
+        <li><a href="journal.html">Journal</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav__cta">Demande privée</a>
+      <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero hero--short" aria-label="Contact">
+    <img class="hero__img" src="images/hero-contact.jpg" alt="Couloir d'hôtel de luxe, parquet en chevrons, appliques en laiton" />
+    <div class="hero__overlay"></div>
+    <div class="hero__content container">
+      <span class="eyebrow fade-up">Demande sur mesure</span>
+      <h1 class="fade-up fade-up--delay-1">Chaque demande<br>mérite une réponse réelle.</h1>
+      <p class="hero__subtitle fade-up fade-up--delay-2">Pas de formulaire générique, pas de réponse automatisée. Votre message est lu par un membre de notre équipe — toujours.</p>
+    </div>
+  </section>
+
+  <!-- SECTION PRINCIPALE -->
+  <section class="bg-ivory">
+    <div class="container">
+      <div class="split" style="gap:64px; align-items:flex-start;">
+
+        <!-- FORMULAIRE -->
+        <div style="flex:1.4;">
+          <span class="eyebrow">Votre demande</span>
+          <span class="gold-rule"></span>
+          <h2 style="margin-bottom:2.4rem;">Dites-nous ce dont vous avez besoin.</h2>
+
+          <form id="contact-form" novalidate>
+            <div class="form-grid" style="border:1px solid rgba(184,176,163,0.25);">
+
+              <div class="form-field">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" autocomplete="given-name" />
+              </div>
+
+              <div class="form-field">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" autocomplete="family-name" />
+              </div>
+
+              <div class="form-field">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="votre@email.com" autocomplete="email" />
+              </div>
+
+              <div class="form-field">
+                <label for="telephone">Téléphone</label>
+                <input type="tel" id="telephone" name="telephone" placeholder="+33 6 00 00 00 00" autocomplete="tel" />
+              </div>
+
+              <div class="form-field form-field--full">
+                <label for="type-service">Type de service</label>
+                <select id="type-service" name="type_service">
+                  <option value="" disabled selected>Choisir une catégorie</option>
+                  <option value="residence">Résidence privée</option>
+                  <option value="evenement-mariage">Mariage & Cérémonie</option>
+                  <option value="evenement-seminaire">Séminaire de direction</option>
+                  <option value="evenement-celebration">Célébration privée</option>
+                  <option value="gastronomie-chef">Chef privé à demeure</option>
+                  <option value="gastronomie-diner">Dîner secret</option>
+                  <option value="gastronomie-cave">Expérience cave & vins</option>
+                  <option value="autre">Autre demande</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="date-arrivee">Date de début envisagée</label>
+                <input type="date" id="date-arrivee" name="date_arrivee" />
+              </div>
+
+              <div class="form-field">
+                <label for="date-depart">Date de fin envisagée</label>
+                <input type="date" id="date-depart" name="date_depart" />
+              </div>
+
+              <div class="form-field form-field--full">
+                <label for="message">Votre message</label>
+                <textarea id="message" name="message" placeholder="Décrivez votre projet, vos attentes particulières, ou posez-nous simplement une question. Aucun détail n'est trop précis."></textarea>
+              </div>
+
+            </div>
+
+            <div class="form-submit">
+              <p style="font-size:0.78rem; color:var(--stone); max-width:360px;">Vos données sont traitées avec la même discrétion que vos séjours. Elles ne sont jamais partagées, jamais archivées au-delà de notre relation.</p>
+              <button type="submit" class="btn btn--forest" id="btn-submit-contact">Envoyer la demande</button>
+            </div>
+          </form>
+
+          <!-- Confirmation (masquée par défaut) -->
+          <div id="form-confirmation" style="display:none; border:1px solid rgba(201,180,135,0.4); padding:40px; margin-top:2px; text-align:center;">
+            <span class="gold-rule" style="margin:0 auto 1.5rem;"></span>
+            <h3 style="font-family:var(--font-serif); color:var(--forest); margin-bottom:0.8rem;">Votre message est bien reçu.</h3>
+            <p style="color:var(--stone); font-size:0.92rem;">Un membre de notre équipe vous répondra dans les 24 heures. Merci de votre confiance.</p>
+          </div>
+        </div>
+
+        <!-- INFOS CONTACT -->
+        <div style="flex:1; padding-top:6rem;">
+          <div style="margin-bottom:48px;">
+            <span class="eyebrow" style="margin-bottom:0.6rem;">Paris</span>
+            <p style="font-family:var(--font-serif); font-size:1.1rem; margin-bottom:0.3rem;">16, avenue Montaigne</p>
+            <p style="color:var(--stone); font-size:0.9rem;">75008 Paris — France</p>
+          </div>
+
+          <hr class="divider" style="margin:0 0 48px;" />
+
+          <div style="margin-bottom:48px;">
+            <span class="eyebrow" style="margin-bottom:0.6rem;">Monaco</span>
+            <p style="font-family:var(--font-serif); font-size:1.1rem; margin-bottom:0.3rem;">3, avenue Princess Grace</p>
+            <p style="color:var(--stone); font-size:0.9rem;">MC 98000 — Monaco</p>
+          </div>
+
+          <hr class="divider" style="margin:0 0 48px;" />
+
+          <div style="margin-bottom:48px;">
+            <span class="eyebrow" style="margin-bottom:0.6rem;">Téléphone</span>
+            <p style="font-family:var(--font-serif); font-size:1.1rem;"><a href="tel:+33144000000" style="color:var(--forest); text-decoration:none;">+33 1 44 00 00 00</a></p>
+            <p style="color:var(--stone); font-size:0.88rem; margin-top:4px;">Disponible 24h/24 pour les clients en séjour.</p>
+          </div>
+
+          <hr class="divider" style="margin:0 0 48px;" />
+
+          <div>
+            <span class="eyebrow" style="margin-bottom:0.6rem;">E-mail</span>
+            <p style="font-family:var(--font-serif); font-size:1.1rem;"><a href="mailto:contact@vnhluxury.com" style="color:var(--forest); text-decoration:none;">contact@vnhluxury.com</a></p>
+            <p style="color:var(--stone); font-size:0.88rem; margin-top:4px;">Réponse sous 24 heures, jours ouvrés.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DÉLAI DE RÉPONSE -->
+  <section class="bg-forest">
+    <div class="container">
+      <div class="steps">
+        <div class="step" id="step-reception">
+          <div class="step__number">24h</div>
+          <h3>Première réponse</h3>
+          <p>Un membre de notre équipe accuse réception de votre demande et vous pose les premières questions pour affiner le projet.</p>
+        </div>
+        <div class="step" id="step-proposition">
+          <div class="step__number">48h</div>
+          <h3>Proposition initiale</h3>
+          <p>Une première proposition construite — pas un catalogue générique. Un projet esquissé spécifiquement à partir de ce que vous nous avez dit.</p>
+        </div>
+        <div class="step" id="step-ajustement">
+          <div class="step__number">∞</div>
+          <h3>Itérations sans limite</h3>
+          <p>Nous ajustons jusqu'à ce que ce soit exactement ce que vous attendez. Il n'y a pas de nombre fixe d'allers-retours. Nous nous arrêtons quand c'est juste.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote-section bg-ivory">
+    <div class="container">
+      <span class="gold-rule" style="margin:0 auto 2rem;"></span>
+      <blockquote>« J'ai envoyé un e-mail un dimanche soir. Le lundi matin, j'avais une réponse détaillée et deux options concrètes. C'est là que j'ai compris que VNH n'était pas un prestataire comme les autres. »</blockquote>
+      <cite>— Un client, Genève</cite>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">VNH <span>Luxury</span></div>
+          <p class="footer__tagline">Hôtellerie privée et conciergerie d'exception depuis 2009. Discrétion absolue. Accès sur invitation.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="residences.html">Résidences</a></li>
+            <li><a href="evenements.html">Événements</a></li>
+            <li><a href="gastronomie.html">Gastronomie</a></li>
+            <li><a href="journal.html">Journal</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="residences.html">Villas privées</a></li>
+            <li><a href="evenements.html">Mariages</a></li>
+            <li><a href="evenements.html">Séminaires</a></li>
+            <li><a href="gastronomie.html">Chef à domicile</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Bureaux</h4>
+          <ul>
+            <li><a href="#">Paris — 16, av. Montaigne</a></li>
+            <li><a href="#">Monaco — 3, av. Princess Grace</a></li>
+            <li><a href="mailto:contact@vnhluxury.com">contact@vnhluxury.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 VNH Luxury. Tous droits réservés.</p>
+        <p>Mentions légales · Politique de confidentialité</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('nav-links');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      burger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+    });
+
+    // Formulaire
+    const form = document.getElementById('contact-form');
+    const confirmation = document.getElementById('form-confirmation');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      form.style.display = 'none';
+      confirmation.style.display = 'block';
+      confirmation.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  </script>
+</body>
+</html>
