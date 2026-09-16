@@ -219,15 +219,8 @@ section { padding: var(--section-v) 0; }
 }
 
 .hero--short {
-  height: 60vh;
-  min-height: 480px;
-}
-
-.hero--short .hero__content {
-  padding-top: calc(var(--nav-h) + 24px);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  height: 65vh;
+  min-height: 540px;
 }
 
 .hero__img {
